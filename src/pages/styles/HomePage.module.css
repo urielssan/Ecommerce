@@ -1,0 +1,337 @@
+/* :root moved to index.css */
+:root {
+  --primary-color: #48111d;
+  /* Color principal corporativo */
+  --secondary-color: #f39c12;
+  /* Color secundario (acciones / contraste) */
+  --text-color: #333333;
+  /* Texto principal */
+  --light-gray: #f8f9fa;
+  /* Fondo claro / secciones */
+  --border-color: #e0e0e0;
+  /* Bordes suaves */
+  --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  /* Fuente base */
+}
+
+/* --- GLOBAL & LAYOUT --- */
+body {
+  font-family: var(--font-main);
+  /* color: var(--text-color); Removed to inherit body color (light) */
+
+}
+
+.home-page {
+  background-color: var(--primary-color);
+  min-height: 100vh;
+  min-height: 100vh;
+  /* background-color: var(--light-gray); Removed */
+
+}
+
+.home-container {
+  width: 100%;
+  width: 100%;
+  /* background-color: var(--light-gray); Removed */
+
+}
+
+.home-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+/* --- WELCOME SECTION --- */
+.welcome-section {
+  text-align: center;
+  padding: 60px 0;
+}
+
+.welcome-section h1 {
+  font-size: 2.5rem;
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+  /* Changed to secondary for contrast */
+  /* background-color: var(--light-gray); Removed */
+
+  font-weight: 700;
+}
+
+.welcome-section p {
+  font-size: 1.25rem;
+  font-size: 1.25rem;
+  color: var(--light-gray);
+  /* Changed to light */
+
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.8;
+}
+
+/* --- HERO VIDEO --- */
+.hero-video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  /* Ratio 16:9 */
+  height: 0;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.hero-video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: brightness(0.8);
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 2;
+  width: 90%;
+}
+
+.hero-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-overlay p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.btn-hero {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: transform 0.2s, background 0.2s;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.btn-hero:hover {
+  filter: brightness(0.9);
+  /* Oscurece un poco el color secundario */
+  transform: scale(1.05);
+}
+
+/* --- SOCIAL PROOF (GOOGLE REVIEWS) --- */
+.social-proof-section,
+.google-reviews-section {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  /* background-color: var(--primary-color); Inherited from body now */
+}
+
+/* New Wrapper for Carousel */
+.google-review-card-wrapper {
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 30px;
+  width: 100%;
+  max-width: 650px;
+  /* Slightly wider for carousel */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.google-header-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.google-header-main h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+.google-header-main .rating-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.google-header-main .rating-row .stars {
+  color: #ffc107;
+  display: flex;
+}
+
+.btn-google {
+  display: inline-block;
+  color: var(--text-color);
+  font-weight: bold;
+  text-decoration: none;
+  border: 1px solid var(--text-color);
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: background 0.2s;
+  background: transparent;
+}
+
+.btn-google:hover {
+  background-color: var(--text-color);
+  color: white;
+}
+
+/* --- QUICK LINKS --- */
+.quick-links {
+  padding: 40px 20px;
+  text-align: center;
+  padding: 40px 20px;
+  text-align: center;
+  /* background-color: var(--primary-color); Inherited */
+
+}
+
+.quick-links h2 {
+  color: var(--secondary-color);
+  /* Changed to secondary */
+  margin-bottom: 30px;
+
+}
+
+.quick-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.quick-card {
+  background: white;
+  padding: 20px 40px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+  border: 1px solid var(--border-color);
+}
+
+.quick-card:hover {
+  transform: translateY(-3px);
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .hero-overlay h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-overlay p {
+    font-size: 1rem;
+  }
+
+  .btn-hero {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+
+  .welcome-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .welcome-section p {
+    font-size: 1rem;
+  }
+}
+
+/* --- BUBBLES SECTION --- */
+.bubbles-section {
+  width: 100%;
+  overflow-x: auto;
+  background-color: var(--primary-color);
+  /* Match background */
+  padding: 30px 0 10px 0;
+  /* Un poco de padding */
+  /* Hide scrollbar for cleaner look */
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE 10+ */
+}
+
+.bubbles-section::-webkit-scrollbar {
+  display: none;
+  /* Chrome/Safari */
+}
+
+.bubbles-scroll-container {
+  display: flex;
+  gap: 25px;
+  padding: 0 20px;
+  width: max-content;
+  /* Ensure it scrolls */
+  align-items: flex-start;
+  margin: 0 auto;
+  /* Si no llena el ancho, lo centra? No, con max-content se alinea start */
+}
+
+
+.bubble-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  width: 90px;
+  /* Fixed width */
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.bubble-item:hover {
+  transform: scale(1.1);
+}
+
+.bubble-image-wrapper {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 10px;
+  border: 2px solid var(--secondary-color);
+  /* Ring color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  /* Fondo por si la imagen es transparente */
+}
+
+.bubble-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bubble-title {
+  color: var(--light-gray);
+  font-size: 0.85rem;
+  text-align: center;
+  line-height: 1.2;
+  font-weight: 500;
+  text-transform: capitalize;
+}

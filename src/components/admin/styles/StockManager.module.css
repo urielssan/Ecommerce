@@ -1,0 +1,164 @@
+.stock-container {
+    background-color: transparent;
+    color: var(--light-color);
+}
+
+.stock-form {
+    background-color: var(--primary-color);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+    border: 1px solid var(--border-color);
+}
+
+.stock-form h4 {
+    color: var(--secondary-color);
+    margin-top: 0;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 1.25rem;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    color: var(--light-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.form-group select,
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: var(--light-color);
+    color: var(--text-color);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+}
+
+/* Movement Type Styles */
+.select-entrada {
+    border-left: 5px solid #2ecc71 !important;
+}
+
+.select-salida {
+    border-left: 5px solid #e74c3c !important;
+}
+
+/* Button overrides for Salida */
+.btn-salida {
+    background-color: #e74c3c !important;
+}
+
+.btn-salida:hover {
+    background-color: #c0392b !important;
+}
+
+/* Table */
+.report-section {
+    width: 80vw;
+    overflow-x: auto;
+}
+
+.report-title {
+    color: var(--secondary-color);
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.stock-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: var(--light-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border-color);
+    min-width: 1000px;
+    /* Force scroll on small screens */
+}
+
+.stock-table th {
+    background-color: var(--light-color);
+    color: var(--text-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    padding: 8px 5px;
+    border-bottom: 2px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    text-align: center;
+    white-space: normal;
+    /* Allow wrap to save width */
+    vertical-align: bottom;
+}
+
+.stock-table th:last-child {
+    border-right: none;
+}
+
+.stock-table td {
+    padding: 8px 5px;
+    border-bottom: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    color: var(--text-color);
+    vertical-align: middle;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.stock-table td:nth-child(1) {
+    font-size: 0.75rem;
+}
+
+.stock-table td:last-child {
+    border-right: none;
+}
+
+.stock-table td:nth-child(2) {
+    text-align: left;
+    /* Product Name left aligned */
+}
+
+.stock-table tr:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.stock-table tr.low-stock {
+    background-color: rgba(139, 26, 37, 0.2);
+}
+
+.error-msg {
+    color: #e74c3c;
+    margin-bottom: 15px;
+}
+
+.success-msg {
+    color: #2ecc71;
+    margin-bottom: 15px;
+}

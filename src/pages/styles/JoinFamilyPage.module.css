@@ -1,0 +1,177 @@
+.join-container {
+    max-width: 1300px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 40px 20px;
+    color: var(--light-gray);
+    background-color: var(--primary-color);
+
+}
+
+/* --- HEADER --- */
+.join-header {
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--light-gray);
+}
+
+.image-wrapper {
+    margin-bottom: 30px;
+}
+
+.image-wrapper img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    /* Bordes suaves */
+    /* Si la imagen sin fondo es muy grande, limitamos el ancho */
+    max-height: 50vh;
+    object-fit: contain;
+}
+
+.join-intro {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--light-gray);
+}
+
+/* --- BENEFICIOS --- */
+.benefits-section {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.benefits-section h2 {
+    color: var(--secondary-color);
+
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.benefits-subtitle {
+    margin-bottom: 40px;
+    color: var(--light-gray);
+
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.benefit-card {
+    background-color: var(--light-gray);
+    padding: 30px 20px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    border-color: var(--secondary-color);
+}
+
+.benefit-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+}
+
+.benefit-card h3 {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.benefit-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+/* --- ACTION BOX (Formulario) --- */
+.how-to-join-section {
+    margin-bottom: 60px;
+}
+
+.cta-box {
+    background: var(--primary-color);
+    color: white;
+    padding: 50px 30px;
+    border-radius: 15px;
+    border: 1px solid var(--light-gray);
+    /* Added border */
+
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 51, 102, 0.2);
+}
+
+.cta-box h2 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.cta-box p {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.btn-join-form {
+    display: inline-block;
+    background-color: #ffffff;
+    color: var(--text-color);
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: transform 0.2s, background-color 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-join-form:hover {
+    transform: scale(1.01);
+    transition: transform 0.2s;
+}
+
+.cta-disclaimer {
+    margin-top: 30px !important;
+    font-size: 0.9rem !important;
+    font-style: italic;
+}
+
+/* --- FOOTER SOCIAL --- */
+.social-connect {
+    text-align: center;
+    border-top: 1px solid #eee;
+    padding-top: 40px;
+}
+
+.social-connect p {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: var(--light-gray);
+
+}
+
+.instagram-link {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+    /* Color Instagram */
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.instagram-link:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,23 @@
+.btn-primary {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 15px 25px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    display: block;
+    margin: 0 auto;
+    width: 250px;
+    margin-top: 30px;
+}
+
+.btn-primary:hover {
+    filter: brightness(1.1);
+}
+
+.btn-primary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}

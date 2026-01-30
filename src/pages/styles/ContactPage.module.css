@@ -1,0 +1,210 @@
+:root {
+    --primary-color: #48111d;
+    /* Color principal corporativo */
+    --secondary-color: #f39c12;
+    /* Color secundario (acciones / contraste) */
+    --text-color: #333333;
+    /* Texto principal */
+    --light-gray: #f8f9fa;
+    /* Fondo claro / secciones */
+    --border-color: #e0e0e0;
+    /* Bordes suaves */
+    --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    /* Fuente base */
+}
+
+.contact-container {
+    max-width: 1300px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 50px 20px;
+    color: var(--light-gray);
+    background-color: var(--primary-color);
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contact-header h1 {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+
+    margin-bottom: 10px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    /* La derecha es más ancha */
+    gap: 40px;
+}
+
+/* --- COLUMNA INFO --- */
+.contact-info-card {
+    background-color: var(--light-gray);
+    color: var(--text-color);
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    /* Added border for visibility */
+
+    box-shadow: 0 10px 30px rgba(0, 51, 102, 0.2);
+}
+
+.contact-info-card h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: var(--text-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 15px;
+}
+
+.info-intro {
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.info-item .icon {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    background: var(--border-color);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--primary-color);
+}
+
+.info-item strong {
+    display: block;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 2px;
+}
+
+.info-item p {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.social-links-contact {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.social-links-contact a {
+    color: var(--text-color);
+    margin-right: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* --- COLUMNA FORMULARIO --- */
+.contact-form-wrapper {
+    background: var(--light-gray);
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.contact-form h3 {
+    margin-top: 0;
+    color: var(--text-color);
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--primary-color);
+    color: var(--light-gray);
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-submit:hover {
+    background-color: var(--primary-color);
+}
+
+.btn-submit:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.msg-success {
+    color: #27ae60;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.msg-error {
+    color: #c0392b;
+    text-align: center;
+    margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        /* Una columna en celular */
+    }
+
+    .form-grid-2 {
+        grid-template-columns: 1fr;
+    }
+}

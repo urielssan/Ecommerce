@@ -1,0 +1,276 @@
+/* Dark Theme for Product CRUD */
+.product-crud-container {
+    background-color: transparent;
+    color: var(--light-color);
+}
+
+/* Formulario Limpio (Dark) */
+.product-crud-form {
+    background-color: var(--primary-color);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+    border: 1px solid var(--border-color);
+}
+
+.product-crud-form h4 {
+    color: var(--secondary-color);
+    margin-top: 0;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    /* Keep left aligned within the centered block */
+}
+
+/* ... existing styles ... */
+
+.checkbox-center input {
+    width: 16px;
+    /* Smaller */
+    height: 16px;
+    margin: 0;
+    accent-color: var(--secondary-color);
+}
+
+/* Search Bar */
+.search-container {
+    margin-bottom: 20px;
+    max-width: 100%;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    background-color: var(--light-color);
+    color: var(--text-color);
+    margin: 0 auto;
+    max-width: 50%;
+    font-size: 1rem;
+}
+
+.search-input::placeholder {
+    color: #555555;
+}
+
+/* Actions */
+.actions-cell {
+    display: flex;
+    gap: 2em;
+    /* Requested gap */
+    align-items: center;
+    /* justify-content: center; Optional if you want them centered in cell */
+}
+
+/* Campos de Formulario */
+/* Campos de Formulario */
+/* Campos de Formulario */
+.form-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 600px;
+    /* Reduced width for better readability */
+    margin: 0 auto;
+    /* Center horizontally */
+    width: 100%;
+}
+
+/* Media queries removed to force 1 column */
+
+.product-crud-form .form-group {
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.section-divider {
+    grid-column: 1 / -1;
+    border-bottom: 1px solid var(--border-color);
+    margin: 10px 0 20px 0;
+    padding-bottom: 5px;
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.checkbox-center {
+    display: flex;
+    flex-direction: row;
+    /* Better for UX */
+    align-items: center;
+    /* Align left */
+    background: rgba(255, 255, 255, 0.05);
+    /* Subtle bg for emphasis */
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: background 0.2s;
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+.checkbox-center:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.checkbox-center label {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* Old input style removed */
+
+.product-crud-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--light-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.3px;
+}
+
+.product-crud-form input,
+.product-crud-form select,
+.product-crud-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    /* More comfy padding */
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    /* Slightly lighter for readability */
+    color: #333;
+    /* Dark text for contrast against light input bg */
+    transition: all 0.2s ease;
+}
+
+/* Specific fix for inputs if global theme makes them dark, ensuring readability */
+.product-crud-form input::placeholder,
+.product-crud-form textarea::placeholder {
+    color: #888;
+}
+
+.product-crud-form textarea {
+    min-height: 100px;
+    resize: vertical;
+    line-height: 1.5;
+}
+
+.product-crud-form input:focus,
+.product-crud-form select:focus,
+.product-crud-form textarea:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.3);
+    background-color: #fff;
+}
+
+/* Botones */
+.btn-primary {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 15px 25px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    display: block;
+    margin: 0 auto;
+    width: 250px;
+    margin-top: 30px;
+}
+
+.btn-primary:hover {
+    filter: brightness(1.1);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--light-color);
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--light-color);
+}
+
+/* Listado de Productos (Grid o Tabla) */
+.product-crud-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: var(--primary-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border-color);
+}
+
+.product-crud-table th {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    padding: 15px;
+    border-bottom: 2px solid var(--border-color);
+    text-align: left;
+}
+
+.product-crud-table td {
+    padding: 15px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--light-color);
+    vertical-align: middle;
+}
+
+.product-crud-table tr:last-child td {
+    border-bottom: none;
+}
+
+.product-crud-table tr:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Acciones en tabla */
+.btn-icon {
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+.btn-icon.delete {
+    background-color: #8b1a25;
+    color: white;
+    border: 1px solid #8b1a25;
+}

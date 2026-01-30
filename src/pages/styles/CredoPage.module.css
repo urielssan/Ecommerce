@@ -1,0 +1,249 @@
+.credo-container {
+    max-width: 1300px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 60px 20px;
+    color: var(--light-gray);
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- HEADER --- */
+.credo-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.credo-pretitle {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.9rem;
+    color: var(--light-gray);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.credo-header h1 {
+    font-size: 3rem;
+    color: var(--light-gray);
+    margin: 0;
+    font-family: 'Georgia', serif;
+}
+
+.header-divider {
+    width: 60px;
+    height: 4px;
+    background-color: var(--light-gray);
+    margin: 20px auto;
+    border-radius: 2px;
+}
+
+.credo-intro {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: var(--light-gray);
+    line-height: 1.6;
+}
+
+/* --- CAROUSEL --- */
+.carousel-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    /* flex-grow: 1; Remove flex-grow to avoid stretching too much vertically if content is short */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.carousel-content {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    aspect-ratio: 16/9;
+    min-height: 400px;
+    background-color: #333;
+    /* Placeholder dark background */
+}
+
+.carousel-image-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.1) 100%);
+}
+
+.carousel-text-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 60px;
+    /* More side padding to avoid covering by arrows */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+    /* Let clicks pass through if needed, though buttons are above z-index */
+}
+
+.slide-number {
+    font-size: 5rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.761);
+    position: absolute;
+    top: 100px;
+    right: 170px;
+    line-height: 1;
+    font-family: 'Georgia', serif;
+}
+
+.slide-text {
+    font-size: 2rem;
+    color: #fff;
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    max-width: 90%;
+    margin-bottom: 30px;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Navigation */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    pointer-events: auto;
+    /* Re-enable pointer events */
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev-btn {
+    left: 20px;
+}
+
+.next-btn {
+    right: 20px;
+}
+
+/* Indicators */
+.indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 12px;
+    flex-wrap: wrap;
+    /* Handle many dots */
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator:hover {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.active {
+    background: white;
+    transform: scale(1.2);
+}
+
+/* Footer */
+.credo-footer {
+    text-align: center;
+    margin-top: 60px;
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    color: var(--light-gray);
+    font-size: 1.2rem;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .carousel-content {
+        aspect-ratio: 3/4;
+        /* Portrait on mobile */
+    }
+
+    .slide-text {
+        font-size: 1.5rem;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .slide-number {
+        font-size: 5rem;
+        top: 10px;
+        right: 20px;
+    }
+
+    .nav-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+        background: rgba(0, 0, 0, 0.3);
+        /* Darker on mobile for contrast */
+    }
+
+    .credo-header h1 {
+        font-size: 2.2rem;
+    }
+}

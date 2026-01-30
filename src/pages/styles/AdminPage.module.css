@@ -1,0 +1,126 @@
+:root {
+    --primary-color: #48111d;
+    /* Color principal corporativo */
+    --secondary-color: #f39c12;
+    /* Color secundario (acciones / contraste) */
+    --text-color: #333333;
+    /* Texto principal */
+    --light-gray: #f8f9fa;
+    /* Fondo claro / secciones */
+    --border-color: #e0e0e0;
+    /* Bordes suaves */
+    --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    /* Fuente base */
+}
+
+/* Importante: El contenedor principal usa Light Gray */
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--primary-color);
+}
+
+/* Sidebar Oscuro (Primary Color) */
+.admin-sidebar {
+    width: 260px;
+    background-color: var(--primary-color);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    height: max-content;
+}
+
+.sidebar-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+}
+
+.sidebar-header h3 {
+    color: var(--secondary-color);
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.sidebar-header p {
+    color: rgba(255, 255, 255, 0.7);
+    margin: 5px 0 0 0;
+    font-size: 0.9rem;
+}
+
+.sidebar-nav button {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.7);
+    border: none;
+    padding: 12px 15px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    border-radius: 6px;
+    transition: all 0.2s;
+    font-weight: 500;
+}
+
+.sidebar-nav button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.sidebar-nav button.active {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    border-left: 4px solid var(--secondary-color);
+    font-weight: 600;
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logout-btn {
+    background: transparent;
+    color: #ffcccc;
+    border: 1px solid rgba(255, 204, 204, 0.3);
+    padding: 10px;
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.logout-btn:hover {
+    background: rgba(255, 0, 0, 0.1);
+    border-color: #ff9999;
+}
+
+/* Header del contenido principal */
+.main-header h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+    color: var(--secondary-color);
+    font-size: 1.8rem;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 15px;
+    font-weight: 600;
+
+}
+
+.admin-main {
+    flex-grow: 1;
+    padding: 2rem;
+    background-color: var(--primary-color);
+    /* Clean Light Background */
+    overflow-y: auto;
+}

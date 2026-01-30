@@ -1,0 +1,22 @@
+/* :root moved to index.css */
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background-color: var(--primary-color);
+  /* Updated to match theme */
+  color: var(--light-gray);
+  /* Updated for contrast */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Reset básico de botones */
+button {
+  font-family: inherit;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

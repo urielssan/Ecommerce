@@ -1,0 +1,102 @@
+/* Dark Theme for Subcategory CRUD */
+
+.subcategory-crud-container {
+    background-color: transparent;
+    color: var(--light-color);
+}
+
+.subcategory-crud-form {
+    background-color: var(--primary-color);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+    border: 1px solid var(--border-color);
+}
+
+.subcategory-crud-form h4 {
+    color: var(--secondary-color);
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+    font-size: 1.25rem;
+}
+
+.subcategory-crud-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--light-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.subcategory-crud-form input,
+.subcategory-crud-form select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: all 0.2s;
+    background-color: var(--light-color);
+    color: var(--text-color);
+}
+
+.subcategory-crud-form input:focus,
+.subcategory-crud-form select:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.2);
+}
+
+/* Tabla Limpia */
+.subcategory-crud-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: var(--primary-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border-color);
+}
+
+.subcategory-crud-table th {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--border-color);
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.subcategory-crud-table td {
+    padding: 15px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--light-color);
+}
+
+.subcategory-crud-table tr:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Botones Acciones */
+.btn-icon {
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+.btn-icon.delete {
+    background-color: #8b1a25;
+    color: white;
+}

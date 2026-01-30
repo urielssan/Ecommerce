@@ -1,0 +1,27 @@
+:root {
+	--primary-color: #48111d;
+	/* Color principal corporativo */
+	--secondary-color: #f39c12;
+	/* Color secundario (acciones / contraste) */
+	--text-color: #333333;
+	/* Texto principal */
+	--light-gray: #f8f9fa;
+	/* Fondo claro / secciones */
+	--border-color: #e0e0e0;
+	/* Bordes suaves */
+	--font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	/* Fuente base */
+	--light-color: var(--light-gray);
+}
+
+body {
+	margin: 0;
+	font-family: var(--font-main);
+	background-color: var(--primary-color);
+	color: var(--light-gray);
+	-webkit-font-smoothing: antialiased;
+}
+
+button {
+	font-family: inherit;
+}

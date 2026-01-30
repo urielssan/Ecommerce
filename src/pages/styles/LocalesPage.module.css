@@ -1,0 +1,158 @@
+:root {
+    --primary-color: #48111d;
+    /* Color principal corporativo */
+    --secondary-color: #f39c12;
+    /* Color secundario (acciones / contraste) */
+    --text-color: #333333;
+    /* Texto principal */
+    --light-gray: #f8f9fa;
+    /* Fondo claro / secciones */
+    --border-color: #e0e0e0;
+    /* Bordes suaves */
+    --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    /* Fuente base */
+}
+
+.locales-container {
+    max-width: 1300px;
+    min-width: 70%;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: var(--primary-color);
+}
+
+.locales-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.locales-header h1 {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+
+    /* Tu azul corporativo */
+    margin-bottom: 10px;
+}
+
+.locales-header p {
+    color: var(--light-gray);
+
+    font-size: 1.1rem;
+}
+
+/* --- TARJETA DEL LOCAL --- */
+.local-card {
+    display: flex;
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    /* Para que el mapa no se salga de las esquinas */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 40px;
+    min-height: 400px;
+    /* Altura mínima para que el mapa se luzca */
+}
+
+/* Columna Info */
+.local-info {
+    flex: 1;
+    /* Ocupa espacio flexible */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.local-info h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--primary-color);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.info-item .icon {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    width: 30px;
+    /* Ancho fijo para alinear texto */
+    text-align: center;
+    color: var(--primary-color);
+}
+
+/* Botones de Contacto */
+.contact-buttons {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn-contact {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.btn-contact:hover {
+    filter: brightness(1.1);
+    transition: ease-in-out 0.2s;
+}
+
+.btn-whatsapp {
+    background-color: #1a9146;
+    /* Verde WhatsApp */
+    color: white;
+}
+
+.btn-phone {
+    background-color: var(--light-gray);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+.btn-phone:hover {
+    filter: brightness(0.9);
+    transition: ease-in-out 0.2s;
+}
+
+/* Columna Mapa */
+.local-map {
+    flex: 1.2;
+    /* El mapa es un poquito más ancho que la info */
+    background-color: var(--light-gray);
+}
+
+/* --- RESPONSIVE (Móvil) --- */
+@media (max-width: 768px) {
+    .local-card {
+        flex-direction: column;
+        /* Uno arriba del otro */
+    }
+
+    .local-map {
+        height: 300px;
+        /* Altura fija en celular */
+        flex: none;
+    }
+
+    .local-info {
+        padding: 25px;
+    }
+}

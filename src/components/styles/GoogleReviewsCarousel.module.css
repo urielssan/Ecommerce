@@ -1,0 +1,151 @@
+.reviews-carousel-container {
+    width: 100%;
+    max-width: 600px;
+    /* Ancho máximo para que parezca una tarjeta de Google */
+    margin: 0 auto;
+    position: relative;
+    padding: 10px 40px;
+    /* Espacio para flechas */
+}
+
+.review-slide {
+    background: white;
+    border-radius: 8px;
+    padding: 20px 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    text-align: left;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.reviewer-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary-color, #48111d);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    margin-right: 12px;
+}
+
+.reviewer-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.reviewer-name {
+    font-weight: 700;
+    font-size: 14px;
+    color: #333;
+}
+
+.review-meta {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: #777;
+    margin-top: 2px;
+}
+
+.stars-row {
+    color: #ffc107;
+    /* Google stars color */
+    margin-right: 8px;
+    display: flex;
+}
+
+.review-text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.google-icon-sm {
+    width: 20px;
+    height: 20px;
+    margin-left: auto;
+    /* Push to right */
+    opacity: 0.7;
+}
+
+/* Nav Buttons */
+.review-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: 1px solid #ddd;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #555;
+    transition: all 0.2s;
+    z-index: 2;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.review-nav-btn:hover {
+    background: #f8f9fa;
+    color: #000;
+    border-color: #ccc;
+}
+
+.prev-btn {
+    left: 0;
+}
+
+.next-btn {
+    right: 0;
+}
+
+.review-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: var(--primary-color, #48111d);
+}
